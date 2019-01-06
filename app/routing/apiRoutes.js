@@ -3,7 +3,7 @@ var path = require("path");
 var friends = [
     {
         name: "Beth",
-        photolink: "www.photoofme.com",
+        photolink: "",
         scores:[
             "4",
             "4",
@@ -39,25 +39,17 @@ module.exports = function (app) {
             pointDiff:Infinity
 
         };
-        // bestMatch.name ='Beth'
+    
 
-        // loop through api data and calulat lowest score and set object to that friend
+        // loop through api data and calulate lowest score and set object to that friend
         for(var i = 0; i < friends.length; i++){
             var diff = 0;
             for(var j = 0; j < newFriend.scores.length; j++){
                Math.abs()
-
                 // Math.abs()
                 //parseInt()
             }
         }
-
-       
-
-
-        // Math for closest match
-
-
 
 
         res.json(newFriend);
