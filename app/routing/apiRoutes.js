@@ -45,7 +45,7 @@ module.exports = function (app) {
         for(var i = 0; i < friends.length; i++){
             var diff = 0;
             for(var j = 0; j < newFriend.scores.length; j++){
-                console.log("J: ", newFriend.scores[j])
+               Math.abs()
 
                 // Math.abs()
                 //parseInt()
