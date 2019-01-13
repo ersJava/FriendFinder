@@ -155,11 +155,12 @@
     </div>
 
     <div class="results">
-        <h1>Your best friend is: </h1>
-        <br>
-        <p id="best-friend"><span></span></p>
-        <p id="best-friend-photo"><span></span></p>
-
+            <div class="jumbotron">
+                    <h1 class="display-4">Your best friend is: </h1>
+                    <p class="lead" id="best-friend"></p>
+                    <hr class="my-4">
+                    <!-- <p id="best-friend-photo"><span></span></p>
+                  </div> -->
     </div>
 
 
@@ -220,7 +221,6 @@
                         $("#best-friend span").text(data.name);
                         // $("#best-friend-photo span").text(data.photolink);
                         // not sure why the link or data is not showing up for the photo links
-
                     });
             } else {
                 alert("Please fill out all fields before submitting!");
