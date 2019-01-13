@@ -44,37 +44,36 @@ module.exports = function (app) {
     app.post("/api/friends", function (req, res) {
         var newFriend = req.body;
         var friendListScore = [];
-        
 
-        friends.push(newFriend);
 
         var bestMatch = {
             name:'',
             photo:'',
-            pointDiff:Infinity
+            pointDiff:100000000000000
         };
-
-        // Did work with my tutor and did a step by step walk-through video on youtube for the 
-        // solution to calculate the scores so I could understand the logic
+        
          
         for(var i = 0; i < friends.length; i++){
             var diff = 0;
-            for(var j = 0; j < newFriend.scores.length; j++){
-               diff += Math.abs(newFriend.scores[j] - friends[i].scores[j]); 
-                //parseInt()
+            var currentFriend = friends[i];
+            console.log("Current Friend: ", currentFriend)
+            for(var j = 0; j < currentFriend.scores.length; j++){
+               diff += Math.abs(parseInt(newFriend.scores[j]) - parseInt(friends[i].scores[j])); 
+               
             }
+            console.log("DIFF: ", diff)
 
-            friendListScore.push({
-                name: friends[i].name,
-                photo: friends[i].photo,
-                diff: diff
-            });
+            if(diff <= bestMatch.pointDiff){
+                bestMatch.name = currentFriend.name;
+                bestMatch.photo = currentFriend.photo;
+                bestMatch.pointDiff = diff
+            }   
+        
         }
-        var bestMatch = friends.sort(function(a,b){
-            return a.diff - b.diff;
-        })[0];
 
-        res.json(newFriend);
+        friends.push(newFriend);
+
+        res.json(bestMatch);
     });
 }
 

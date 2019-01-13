@@ -204,8 +204,13 @@
 
                     $.post("/api/friends", newFriend)
                         .then(function (data) {
-                            console.log("survey.html", data)
+                            console.log("Data: ", data)
                             alert("Calculating results");
+
+
+
+
+                            
                         });
                 } else {
                     alert("Please fill out all fields before submitting!");
