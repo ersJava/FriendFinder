@@ -153,6 +153,16 @@
             Submit</button>
         <hr>
     </div>
+
+    <div class="results">
+        <h1>Your best friend is: </h1>
+        <br>
+        <p id="best-friend"><span></span></p>
+        <p id="best-friend-photo"><span></span></p>
+
+    </div>
+
+
     <div class="row">
         <div class="col-12">
             <a href="/api/friends">API Friend List |</a>
@@ -163,6 +173,7 @@
     </div>
     <script type="text/javascript">
         // took solution for form check from example: https://friend-finder-fsf.herokuapp.com/survey
+        $('.results').hide();
 
         $("#submit").on("click", function (event) {
             event.preventDefault();
@@ -182,41 +193,39 @@
                 });
                 return isValid;
             }
-                // worked this part out with tutor
-                if (formCheck()) {
-                    var newFriend = {
-                        name: $("#name").val().trim(),
-                        photolink: $("#photo").val().trim(),
-                        scores: [
-                            $("#q1").val().trim(),
-                            $("#q2").val().trim(),
-                            $("#q3").val().trim(),
-                            $("#q4").val().trim(),
-                            $("#q5").val().trim(),
-                            $("#q6").val().trim(),
-                            $("#q7").val().trim(),
-                            $("#q8").val().trim(),
-                            $("#q9").val().trim(),
-                            $("#q10").val().trim()
-                        ]
-                    };
-                    console.log(newFriend);
+            // worked this part out with tutor
+            if (formCheck()) {
+                var newFriend = {
+                    name: $("#name").val().trim(),
+                    photolink: $("#photo").val().trim(),
+                    scores: [
+                        $("#q1").val().trim(),
+                        $("#q2").val().trim(),
+                        $("#q3").val().trim(),
+                        $("#q4").val().trim(),
+                        $("#q5").val().trim(),
+                        $("#q6").val().trim(),
+                        $("#q7").val().trim(),
+                        $("#q8").val().trim(),
+                        $("#q9").val().trim(),
+                        $("#q10").val().trim()
+                    ]
+                };
+                console.log(newFriend);
 
-                    $.post("/api/friends", newFriend)
-                        .then(function (data) {
-                            console.log("Data: ", data)
-                            alert("Calculating results");
+                $.post("/api/friends", newFriend)
+                    .then(function (data) {
+                        $('.container').hide();
+                        $('.results').show();
+                        $("#best-friend span").text(data.name);
+                        // $("#best-friend-photo span").text(data.photolink);
+                        // not sure why the link or data is not showing up for the photo links
 
-
-
-
-                            
-                        });
-                } else {
-                    alert("Please fill out all fields before submitting!");
-                }
-            });
-
+                    });
+            } else {
+                alert("Please fill out all fields before submitting!");
+            }
+        });
     </script>
 
 </body>
