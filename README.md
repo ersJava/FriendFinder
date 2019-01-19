@@ -1,7 +1,8 @@
 ![Logo of the project](/images/friend.png)
 
 # Friend Finder
-> "Express"way to new friendships!
+>"Express"way to new friendships!
+
 Simple survey to find a new best friend!
 
 ## Features
