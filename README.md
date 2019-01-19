@@ -11,7 +11,9 @@ This full-stack site will ask 10 questions. Each answer is based on a scale from
 
 Friend Finder will calculate the score based on the user's answers, then compare the answers with those from other users, and match the results with the friend with the most compatible match. The name of the new best friend and photo will then be displayed!
 
-## Technologies Used
+## Project Detials
+
+### Technologies Used
 * Node JS
 * Express
 * Bootstrap 4
