@@ -2,12 +2,10 @@
 
 # Friend Finder
 > 
-
-For music lovers and movie enthusiast who can search songs, concerts and movies with one app.
+Simple survey to find your new best friend!
 
 ## Features
-
-LIRI will perform an assortment of functions on the command line in the terminal. The multiple functions are performed from the case switch statements.
+10 questions of your choosing. Each answer should be on a scale of 1 to 5 based on how much you agree or disagree with a question.
 
 ### To get started
 Type in `node liri` in the command line. A set an instructions will pop up to show you the different functions of LIRI.
