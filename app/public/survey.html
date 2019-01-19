@@ -157,8 +157,8 @@
     <div class="results">
             <div class="jumbotron">
                     <h1 class="display-4">Your best friend is: </h1>
-                    <p id="best-friend"><span></span></p>
-                    <p id="best-friend-photo"><span></span></p>
+                    <p id="best-friend"></p>
+                    <p id="best-friend-photo"></p>
                   </div>
 
     </div>
@@ -218,8 +218,8 @@
                     .then(function (data) {
                         $('.container').hide();
                         $('.results').show();
-                        $("#best-friend span").text(data.name);
-                        $("#best-friend-photo span").attr("src", data.photolink);
+                        $("#best-friend").text(data.name);
+                        $("#best-friend-photo").attr("src", data.photolink);
                         // not sure why the link or data is not showing up for the photo links
                     });
             } else {

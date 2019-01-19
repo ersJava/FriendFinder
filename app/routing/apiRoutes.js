@@ -1,5 +1,7 @@
 var path = require("path");
 
+var friends = require("../data/friends");
+
 module.exports = function (app) {
     app.get("/api/friends", function (req, res) {
         return res.json(friends);
@@ -7,15 +9,12 @@ module.exports = function (app) {
 
     app.post("/api/friends", function (req, res) {
         var newFriend = req.body;
-        var friendListScore = [];
-
 
         var bestMatch = {
             name:'',
             photo:'',
-            pointDiff:100000000000000
+            pointDiff: Infinity,
         };
-        
          
         for(var i = 0; i < friends.length; i++){
             var diff = 0;
@@ -32,7 +31,6 @@ module.exports = function (app) {
                 bestMatch.photo = currentFriend.photo;
                 bestMatch.pointDiff = diff
             }   
-        
         }
 
         friends.push(newFriend);
