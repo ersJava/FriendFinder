@@ -7,6 +7,8 @@ Simple survey to find a new best friend.
 
 ## How It Works
 
+![Logo of the project](/images/screenshot.png)
+
 This full-stack site will ask 10 questions. Each answer is based on a scale from 1 to 5 on how much the user agrees or disagrees with a question.
 
 Friend Finder will calculate the score based on the user's answers, then compare the answers with those from other users, and match the results with the friend with the most compatible match. The name of the new best friend and photo will then be displayed!
