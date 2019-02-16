@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
         crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
@@ -16,6 +18,12 @@
 
     <div class="container">
         <h2>Survey Questions</h2>
+        <p>Each answer is based on a scale from 1 to 5 on how much you
+            agrees or disagrees with a question.
+
+            Friend Finder will calculate your score based on the user's answers and match the results with the friend
+            with the most compatible match. The name of the new
+            best friend and photo will then appear!</p>
         <hr>
 
         <h3><strong>About You</strong></h3>
@@ -148,17 +156,18 @@
         <br>
         <br>
 
-        <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>
+        <button type="submit" class="btn btn-light btn-lg btn-block" id="submit"><i class="fa fa-check-circle"
+                aria-hidden="true"></i>
             Submit</button>
         <hr>
     </div>
 
     <div class="results">
-            <div class="jumbotron">
-                    <h1 class="display-4">Your best friend is: </h1>
-                    <p id="best-friend"></p>
-                    <p id="best-friend-photo"></p>
-                  </div>
+        <div class="jumbotron">
+            <h1 class="display-4">Your best friend is: </h1>
+            <p id="best-friend"></p>
+            <p id="best-friend-photo"></p>
+        </div>
 
     </div>
 
