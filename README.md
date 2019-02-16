@@ -1,5 +1,3 @@
-![Logo of the project](app/public/assets/images/friendfinder_logo.png)
-
 # Friend Finder
 https://fathomless-plateau-41513.herokuapp.com
 
