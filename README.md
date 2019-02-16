@@ -11,8 +11,8 @@ This full-stack site will ask 10 questions. Each answer is based on a scale from
 
 Friend Finder will calculate the score based on the user's answers, then compare the answers with those from other users, and match the results with the friend with the most compatible match. The name of the new best friend and photo will then be displayed!
 
-![screenshot of app](/images/screenshot0.png)
-![screenshot of app](/images/screenshot01.png)
+![screenshot of app](screenshot0.png)
+![screenshot of app](screenshot01.png)
 
 ## Project Details
 
